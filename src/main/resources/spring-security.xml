@@ -65,7 +65,8 @@
 		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
         <beans:constructor-arg name="loginFormUrl" value="/loginPage"></beans:constructor-arg>
 	</beans:bean>
-
+	
+	<!-- 保存session信息, 监听session销毁事件  -->
     <beans:bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl"/>
     <!--配置web端使用权限控制-->
     <beans:bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/>
